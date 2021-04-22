@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %} Web App {% endblock title %}
+
+{% block body %}
+
+<div class="container">
+<h1 class="text-center">Web App</h1>
+<form method="post" action="webapp/" >
+{% csrf_token %}
+  <div class="form-group">
+    <label for="name">web app name</label>
+    <input type="name" class="form-control" id="name" name="name" placeholder="web app name">
+  </div>
+
+  <div class="form-group">
+    <label for="days">deadline days</label>
+    <input type="number" class="form-control" id="days" name="days" placeholder="web app name">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+
+
+</form>
+
+</div>
+
+{% endblock body %}
